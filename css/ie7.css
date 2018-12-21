@@ -1,0 +1,31 @@
+.login 	li {
+	z-index: expression(runtimeStyle.zIndex = 1, this == parentNode.firstChild ? 0 : this.innerHTML = "&gt; " + this.innerHTML );
+}
+.tabs li{
+	display: inline;
+	zoom: 1;
+}
+.sidebar {
+	margin-top: 19px;
+}
+* html .parent img {
+display: block;
+z-index: expression(
+runtimeStyle.zIndex = 1,
+this == ((150/2)-parseInt(offsetHeight)/2) <0 ? style.marginTop="0" : style.marginTop=(150/2)-(parseInt(offsetHeight)/2) +'px');
+}
+*:first-child+html .parent img {
+display: block;
+z-index: expression(
+runtimeStyle.zIndex = 1,
+this == ((150/2)-parseInt(offsetHeight)/2) <0 ? style.marginTop="0" : style.marginTop=(150/2)-(parseInt(offsetHeight)/2) +'px');
+}
+.cat ul>li {
+	z-index: expression(runtimeStyle.zIndex = 1, this.innerHTML = "&ndash;&nbsp;" + this.innerHTML);
+}
+.login li {
+	z-index: expression(runtimeStyle.zIndex = 1, this.innerHTML = this.innerHTML + "&gt;&nbsp;");
+}
+.login li:first-child {
+	z-index: expression(runtimeStyle.zIndex = 1, this.innerHTML = "&gt;&nbsp;" + this.innerHTML + "&nbsp;&gt;&nbsp;");
+}
